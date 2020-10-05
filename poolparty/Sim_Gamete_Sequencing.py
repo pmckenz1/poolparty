@@ -117,7 +117,7 @@ class Sim_Gamete_Sequencing():
         self.haplotypespath = os.path.join(self.directory, 'haplotypes.hdf5')
         haplotypes = h5py.File(self.haplotypespath,'w')
 
-        if evenly_spaced_loci:
+        if not evenly_spaced_loci:
             loci = np.sort(np.random.uniform(0,1,self.ncutsites))
         else:
             loci = np.linspace(0,1,self.ncutsites)
