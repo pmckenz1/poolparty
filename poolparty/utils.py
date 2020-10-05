@@ -1,6 +1,7 @@
 from numba import njit
 import numpy as np
 from tqdm import tqdm_notebook
+from scipy.special import binom
 
 def get_read(arr,
              ncutsites,
